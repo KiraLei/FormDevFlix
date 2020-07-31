@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevFLix</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="scss/app.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="./img/logo.svg" alt="logo" class="logo">
+    </header>
+    <main class="form-login container">
+        <form action="#">
+            <legend>Inicia Sesion</legend>
+            <div class="camp">
+                <input type="text" id="user">
+                <label>Email o número de teléfono</label>
+            </div>
+            <div class="camp">
+                <input type="password" id="password">
+                <label>Contraseña</label>
+                <span>Mostrar</span>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Iniciar sesión">
+            </div>
+
+            <div class="actions">
+                <div class="remember">
+                    <input type="checkbox">
+                    <label> Recuérdame</label>
+                </div>
+                <div class="help">
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
+            </div>
+            <div class="lower-content">
+                <a href="#">Iniciar sesion con facebook</a>
+                
+                <p class="new-user">¿Primera ves en Netflix?
+                    <a href="#">Suscribete ya</a>
+                </p>
+            </div>
+
+            <div class="page-protect">
+                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.
+                <a href="">Más info.</a> 
+
+            </div>
+        </form>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>¿Preguntas? Llama al 01-800-256-0161</p>
+            <nav class="menu-footer">
+                <a href="#">Términos de las tarjetas de regalo</a>
+                <a href="#">Términos de  uso</a>
+                <a href="#">Declaracién de privacidad</a>
+            </nav>
+            <select class="lenguage">
+                <option value="eng">English</option>
+                <option value="spa">Spanish</option>
+            </select>
+
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

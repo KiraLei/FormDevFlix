@@ -1,0 +1,246 @@
+@import "variables";
+@import "mixins";
+
+html {
+  @include box-sizing(border-box);
+}
+*,
+*::after,
+*::before {
+  @include box-sizing(inherit);
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-black;
+  font-family: $font-principal;
+  color: $color-gray2;
+  @include tablet() {
+    background-color: unset;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+}
+
+a {
+  color: $color-gray2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.alerta{
+    color: $color-secondary;
+    display: block;
+    margin-top: -0.5rem;
+    padding-bottom: .8rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+input.no-validate{
+    border-bottom:2px solid $color-secondary !important;
+}
+
+.logo {
+  margin-top: 0.5rem;
+  max-width: 180px;
+  @include tablet() {
+    margin-top: 0.8rem;
+    margin-left: 2%;
+  }
+}
+
+.form-login {
+  @include tablet() {
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 430px;
+    padding: 2rem 4rem;
+    margin: 1rem auto 4rem auto;
+  }
+}
+
+form {
+  legend {
+    color: $color-white;
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: bold;
+  }
+
+  .camp {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+    span{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    label {
+      position: absolute;
+      top: 1.1rem;
+      left: 1rem;
+      font-size: 1rem;
+      transition: font-size .2s ease, top .2s ease;
+
+      &.validate{
+          font-size: 0.6rem;
+          top: .5rem;
+      }
+    }
+
+    input {
+      flex: 1;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      border: none;
+      background-color: $color-gray3;
+      border-radius: $radius;
+      color: $color-white;
+      &:focus {
+        background-color: $color-gray3;
+        outline: none;
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
+          left: 1rem;
+        }
+      }
+    }
+  }
+
+  .submit{
+      display: flex;
+      margin-top: 2rem;
+     
+
+      input[type="submit"]{
+        @include boton($color-primary);
+
+        &:hover{
+            cursor: pointer;
+        }
+      }
+  }
+  .actions{
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0.5rem;
+      margin: 0.5rem 0 8rem 0;
+
+      label, a{
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+  }
+
+  
+}
+
+.lower-content{
+    
+    flex-direction: column;
+    a{
+        font-size: 0.8rem;
+    }
+    .new-user{
+        font-size: 1rem;
+        margin-top: 0.9rem;
+        margin-bottom: 1rem;
+        display: flex;
+
+        a{
+            font-size: 1rem;
+            color: $color-white;
+            margin-left: 0.5rem;
+        }
+        
+    }
+
+}
+
+.page-protect{
+    font-size: 0.82rem;
+    a{
+        color: blue;
+    }
+}
+
+.site-footer{
+    margin-top: 2rem;
+    padding: 2rem 0 4rem 0;
+
+    border-top: 1px solid $color-gray2;
+    @include tablet(){
+        background-color: rgba(0, 0, 0, 0.75);
+        border-top: unset;
+    }
+
+
+    .container{
+     
+        display: flex;
+        flex-direction: column;
+        @include tablet(){
+            max-width: 40%;
+        }
+        
+        p{
+            margin-bottom: 1.8rem;
+        }
+        .menu-footer{
+            display: flex;
+            justify-content: space-between;
+           
+            flex-wrap: wrap;
+            @include desktop(){
+                max-width: 60%;
+            }
+            
+            a{
+                flex: 0 0 auto;
+                font-size: 0.85rem;
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+
+                @include tablet(){
+                    margin-bottom: none;
+                }
+
+                &:last-of-type{
+                    margin-right: 0;
+                }
+
+            }
+        }
+        select{
+            appearance: none;
+            background-color: $color-black;
+            color: $color-gray2;
+            max-width: 140px;
+            border: none;
+
+            padding: 1rem 3rem;
+            border: 1px solid $color-gray2;
+            border-radius: $radius;
+            font-size: 0.8rem;
+            
+           
+        }
+    }
+
+}
+

@@ -1,0 +1,16 @@
+{
+  "name": "netflix-flexbox",
+  "version": "1.0.0",
+  "description": "proyecto-netflix",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flexbox",
+    "netflix",
+    "login"
+  ],
+  "author": "Mirian Anais Quispe Sarmiento",
+  "license": "ISC"
+}
